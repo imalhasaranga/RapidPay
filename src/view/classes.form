@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="d1" green="b4" red="99" type="rgb"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel2" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jLabel1" pref="1276" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel1" max="32767" attributes="3"/>
+                  <Component id="jPanel2" max="32767" attributes="3"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel4" alignment="0" max="32767" attributes="2"/>
+              <Component id="jPanel5" alignment="0" max="32767" attributes="2"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jPanel4" min="-2" max="-2" attributes="2"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel5" max="32767" attributes="2"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel5">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="cd" red="bf" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder justification="2" position="2" title="Fees Details">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                  <Font PropertyName="font" name="Arial" size="12" style="1"/>
+                  <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel35" pref="155" max="32767" attributes="1"/>
+                                  <Component id="jLabel31" alignment="0" pref="155" max="32767" attributes="1"/>
+                                  <Component id="jLabel34" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="cmbtpercent" alignment="0" pref="126" max="32767" attributes="3"/>
+                                          <Component id="tmonthly" alignment="0" pref="126" max="32767" attributes="3"/>
+                                      </Group>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel32" pref="125" max="32767" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="linspercentage" min="-2" pref="26" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="tadmission" alignment="0" min="-2" pref="88" max="-2" attributes="2"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="startdate" min="-2" pref="218" max="-2" attributes="1"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jButton1" pref="143" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteclass" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="bcreate" linkSize="5" min="-2" pref="78" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="bedit" linkSize="5" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel32" alignment="3" pref="22" max="32767" attributes="1"/>
+                                  <Component id="linspercentage" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Component id="cmbtpercent" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="tadmission" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="tmonthly" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="1"/>
+                          <Component id="startdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButton1" linkSize="6" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="deleteclass" linkSize="6" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="bedit" linkSize="6" alignment="3" min="-2" max="-2" attributes="2"/>
+                          <Component id="bcreate" linkSize="6" alignment="3" min="-2" max="-2" attributes="2"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel31">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Teacher Percentage&lt;font color=&quot;Red&quot;&gt;*&lt;/font&gt; &lt;/html&gt;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel32">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Institute Percentage"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbtpercent">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="90">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                    <StringItem index="10" value="11"/>
+                    <StringItem index="11" value="12"/>
+                    <StringItem index="12" value="13"/>
+                    <StringItem index="13" value="14"/>
+                    <StringItem index="14" value="15"/>
+                    <StringItem index="15" value="16"/>
+                    <StringItem index="16" value="17"/>
+                    <StringItem index="17" value="18"/>
+                    <StringItem index="18" value="19"/>
+                    <StringItem index="19" value="20"/>
+                    <StringItem index="20" value="21"/>
+                    <StringItem index="21" value="22"/>
+                    <StringItem index="22" value="23"/>
+                    <StringItem index="23" value="24"/>
+                    <StringItem index="24" value="25"/>
+                    <StringItem index="25" value="26"/>
+                    <StringItem index="26" value="27"/>
+                    <StringItem index="27" value="28"/>
+                    <StringItem index="28" value="29"/>
+                    <StringItem index="29" value="30"/>
+                    <StringItem index="30" value="31"/>
+                    <StringItem index="31" value="32"/>
+                    <StringItem index="32" value="33"/>
+                    <StringItem index="33" value="34"/>
+                    <StringItem index="34" value="35"/>
+                    <StringItem index="35" value="36"/>
+                    <StringItem index="36" value="37"/>
+                    <StringItem index="37" value="38"/>
+                    <StringItem index="38" value="39"/>
+                    <StringItem index="39" value="40"/>
+                    <StringItem index="40" value="41"/>
+                    <StringItem index="41" value="42"/>
+                    <StringItem index="42" value="43"/>
+                    <StringItem index="43" value="44"/>
+                    <StringItem index="44" value="45"/>
+                    <StringItem index="45" value="46"/>
+                    <StringItem index="46" value="47"/>
+                    <StringItem index="47" value="48"/>
+                    <StringItem index="48" value="49"/>
+                    <StringItem index="49" value="50"/>
+                    <StringItem index="50" value="51"/>
+                    <StringItem index="51" value="52"/>
+                    <StringItem index="52" value="53"/>
+                    <StringItem index="53" value="54"/>
+                    <StringItem index="54" value="55"/>
+                    <StringItem index="55" value="56"/>
+                    <StringItem index="56" value="57"/>
+                    <StringItem index="57" value="58"/>
+                    <StringItem index="58" value="59"/>
+                    <StringItem index="59" value="60"/>
+                    <StringItem index="60" value="61"/>
+                    <StringItem index="61" value="62"/>
+                    <StringItem index="62" value="63"/>
+                    <StringItem index="63" value="64"/>
+                    <StringItem index="64" value="65"/>
+                    <StringItem index="65" value="66"/>
+                    <StringItem index="66" value="67"/>
+                    <StringItem index="67" value="68"/>
+                    <StringItem index="68" value="69"/>
+                    <StringItem index="69" value="70"/>
+                    <StringItem index="70" value="71"/>
+                    <StringItem index="71" value="72"/>
+                    <StringItem index="72" value="73"/>
+                    <StringItem index="73" value="74"/>
+                    <StringItem index="74" value="75"/>
+                    <StringItem index="75" value="76"/>
+                    <StringItem index="76" value="77"/>
+                    <StringItem index="77" value="78"/>
+                    <StringItem index="78" value="79"/>
+                    <StringItem index="79" value="80"/>
+                    <StringItem index="80" value="81"/>
+                    <StringItem index="81" value="82"/>
+                    <StringItem index="82" value="83"/>
+                    <StringItem index="83" value="84"/>
+                    <StringItem index="84" value="85"/>
+                    <StringItem index="85" value="86"/>
+                    <StringItem index="86" value="87"/>
+                    <StringItem index="87" value="88"/>
+                    <StringItem index="88" value="89"/>
+                    <StringItem index="89" value="90"/>
+                  </StringArray>
+                </Property>
+                <Property name="selectedItem" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;60&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbtpercentActionPerformed"/>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="cmbtpercentFocusGained"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tadmission">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="575"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tadmissionKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel34">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;Monthly Fees&lt;font color=&quot;Red&quot;&gt;*&lt;/font&gt; &#xa;&lt;/html&gt;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tmonthly">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tmonthlyKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="bcreate">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Create"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bcreateActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="bedit">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Edit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="beditActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="linspercentage">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="40"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel35">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Starting/Started Date &lt;font color=&quot;Red&quot;&gt;&lt;/font&gt;  &lt;/html&gt;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="DeActivate"/>
+                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;b&gt;DeActivate&lt;/b&gt;&lt;br/&gt;&#xa;By clicking this button after selecting a class from the table&lt;br/&gt;&#xa;You can Remove that class from the class table, so that class will not be&lt;br/&gt;&#xa;use again&#xa;&#xa;&lt;/html&gt;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="deleteclass">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Delete New Class"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteclassActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="startdate">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="cd" red="bf" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder justification="2" position="2" title="Fees Details">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                  <Font PropertyName="font" name="Arial" size="12" style="1"/>
+                  <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel25" pref="129" max="32767" attributes="0"/>
+                                  <Component id="lbl2" pref="129" max="32767" attributes="0"/>
+                                  <Component id="jLabel21" pref="129" max="32767" attributes="0"/>
+                                  <Component id="jLabel23" pref="129" max="32767" attributes="0"/>
+                                  <Component id="jLabel22" pref="129" max="32767" attributes="0"/>
+                                  <Component id="jLabel26" pref="129" max="32767" attributes="0"/>
+                                  <Component id="lbl1" pref="129" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Group type="102" alignment="2" attributes="0">
+                                      <Component id="cmbshour" pref="66" max="32767" attributes="2"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="cmbsminute" pref="66" max="32767" attributes="2"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="cmbsampm" pref="68" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="cmbgrade" alignment="2" pref="212" max="32767" attributes="2"/>
+                                  <Component id="cmbteacher" alignment="2" pref="212" max="32767" attributes="2"/>
+                                  <Component id="cmbsubject" alignment="2" pref="212" max="32767" attributes="2"/>
+                                  <Component id="cmbday" alignment="2" pref="212" max="32767" attributes="0"/>
+                                  <Component id="jLabel27" alignment="2" pref="212" max="32767" attributes="2"/>
+                                  <Group type="102" alignment="2" attributes="0">
+                                      <Component id="cmbehour" pref="66" max="32767" attributes="2"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="cmbeminute" pref="66" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="cmbeampm" pref="68" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lteacherno" min="-2" pref="113" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl" pref="456" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lteacherno" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="6" attributes="0"/>
+                                      <Component id="jLabel21" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="cmbgrade" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="6" attributes="0"/>
+                                      <Component id="jLabel22" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="cmbsubject" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="6" attributes="0"/>
+                                      <Component id="jLabel23" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="cmbteacher" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel25" pref="22" max="32767" attributes="0"/>
+                          <Component id="cmbday" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cmbsampm" alignment="3" max="32767" attributes="0"/>
+                          <Component id="cmbshour" alignment="3" max="32767" attributes="0"/>
+                          <Component id="cmbsminute" alignment="3" max="32767" attributes="0"/>
+                          <Component id="lbl2" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel26" alignment="3" max="32767" attributes="0"/>
+                          <Component id="jLabel27" alignment="3" pref="16" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cmbeampm" alignment="3" max="32767" attributes="0"/>
+                          <Component id="cmbeminute" alignment="3" max="32767" attributes="0"/>
+                          <Component id="cmbehour" alignment="3" max="32767" attributes="0"/>
+                          <Component id="lbl1" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="lbl" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel21">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; Select the Grade &lt;font color=&quot;Red&quot;&gt;*&lt;/font&gt; &lt;/html&gt;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbgrade">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbsubject">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbshour">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="12">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                    <StringItem index="10" value="11"/>
+                    <StringItem index="11" value="12"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel22">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; Select the Subject &lt;font color=&quot;Red&quot;&gt;*&lt;/font&gt; &lt;/html&gt;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel23">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; Select the Teacher &lt;font color=&quot;Red&quot;&gt;*&lt;/font&gt; &lt;/html&gt;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbteacher">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbteacherActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lteacherno">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Teacher No:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel25">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Class held Day"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbday">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="7">
+                    <StringItem index="0" value="Sunday"/>
+                    <StringItem index="1" value="Monday"/>
+                    <StringItem index="2" value="Tuesday"/>
+                    <StringItem index="3" value="Wednesday"/>
+                    <StringItem index="4" value="Thursday"/>
+                    <StringItem index="5" value="Friday"/>
+                    <StringItem index="6" value="Saturday"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel26">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Class Time"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbsminute">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="60">
+                    <StringItem index="0" value="00"/>
+                    <StringItem index="1" value="01"/>
+                    <StringItem index="2" value="0 2"/>
+                    <StringItem index="3" value="03"/>
+                    <StringItem index="4" value="04"/>
+                    <StringItem index="5" value="05"/>
+                    <StringItem index="6" value="06"/>
+                    <StringItem index="7" value="07"/>
+                    <StringItem index="8" value="08"/>
+                    <StringItem index="9" value="09"/>
+                    <StringItem index="10" value="10"/>
+                    <StringItem index="11" value="11"/>
+                    <StringItem index="12" value="12"/>
+                    <StringItem index="13" value="13"/>
+                    <StringItem index="14" value="14"/>
+                    <StringItem index="15" value="15"/>
+                    <StringItem index="16" value="16"/>
+                    <StringItem index="17" value="17"/>
+                    <StringItem index="18" value="18"/>
+                    <StringItem index="19" value="19"/>
+                    <StringItem index="20" value="20"/>
+                    <StringItem index="21" value="21"/>
+                    <StringItem index="22" value="22"/>
+                    <StringItem index="23" value="23"/>
+                    <StringItem index="24" value="24"/>
+                    <StringItem index="25" value="25"/>
+                    <StringItem index="26" value="26"/>
+                    <StringItem index="27" value="27"/>
+                    <StringItem index="28" value="28"/>
+                    <StringItem index="29" value="29"/>
+                    <StringItem index="30" value="30"/>
+                    <StringItem index="31" value="31"/>
+                    <StringItem index="32" value="32"/>
+                    <StringItem index="33" value="33"/>
+                    <StringItem index="34" value="34"/>
+                    <StringItem index="35" value="35"/>
+                    <StringItem index="36" value="36"/>
+                    <StringItem index="37" value="37"/>
+                    <StringItem index="38" value="38"/>
+                    <StringItem index="39" value="39"/>
+                    <StringItem index="40" value="40"/>
+                    <StringItem index="41" value="41"/>
+                    <StringItem index="42" value="42"/>
+                    <StringItem index="43" value="43"/>
+                    <StringItem index="44" value="44"/>
+                    <StringItem index="45" value="45"/>
+                    <StringItem index="46" value="46"/>
+                    <StringItem index="47" value="47"/>
+                    <StringItem index="48" value="48"/>
+                    <StringItem index="49" value="49"/>
+                    <StringItem index="50" value="50"/>
+                    <StringItem index="51" value="51"/>
+                    <StringItem index="52" value="52"/>
+                    <StringItem index="53" value="53"/>
+                    <StringItem index="54" value="54"/>
+                    <StringItem index="55" value="55"/>
+                    <StringItem index="56" value="56"/>
+                    <StringItem index="57" value="57"/>
+                    <StringItem index="58" value="58"/>
+                    <StringItem index="59" value="59"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel27">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="To"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbehour">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="12">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                    <StringItem index="10" value="11"/>
+                    <StringItem index="11" value="12"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbeminute">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="60">
+                    <StringItem index="0" value="00"/>
+                    <StringItem index="1" value="01"/>
+                    <StringItem index="2" value="02"/>
+                    <StringItem index="3" value="03"/>
+                    <StringItem index="4" value="04"/>
+                    <StringItem index="5" value="05"/>
+                    <StringItem index="6" value="06"/>
+                    <StringItem index="7" value="07"/>
+                    <StringItem index="8" value="08"/>
+                    <StringItem index="9" value="09"/>
+                    <StringItem index="10" value="10"/>
+                    <StringItem index="11" value="11"/>
+                    <StringItem index="12" value="12"/>
+                    <StringItem index="13" value="13"/>
+                    <StringItem index="14" value="14"/>
+                    <StringItem index="15" value="15"/>
+                    <StringItem index="16" value="16"/>
+                    <StringItem index="17" value="17"/>
+                    <StringItem index="18" value="18"/>
+                    <StringItem index="19" value="19"/>
+                    <StringItem index="20" value="20"/>
+                    <StringItem index="21" value="21"/>
+                    <StringItem index="22" value="22"/>
+                    <StringItem index="23" value="23"/>
+                    <StringItem index="24" value="24"/>
+                    <StringItem index="25" value="25"/>
+                    <StringItem index="26" value="26"/>
+                    <StringItem index="27" value="27"/>
+                    <StringItem index="28" value="28"/>
+                    <StringItem index="29" value="29"/>
+                    <StringItem index="30" value="30"/>
+                    <StringItem index="31" value="31"/>
+                    <StringItem index="32" value="32"/>
+                    <StringItem index="33" value="33"/>
+                    <StringItem index="34" value="34"/>
+                    <StringItem index="35" value="35"/>
+                    <StringItem index="36" value="36"/>
+                    <StringItem index="37" value="37"/>
+                    <StringItem index="38" value="38"/>
+                    <StringItem index="39" value="39"/>
+                    <StringItem index="40" value="40"/>
+                    <StringItem index="41" value="41"/>
+                    <StringItem index="42" value="42"/>
+                    <StringItem index="43" value="43"/>
+                    <StringItem index="44" value="44"/>
+                    <StringItem index="45" value="45"/>
+                    <StringItem index="46" value="46"/>
+                    <StringItem index="47" value="47"/>
+                    <StringItem index="48" value="48"/>
+                    <StringItem index="49" value="49"/>
+                    <StringItem index="50" value="50"/>
+                    <StringItem index="51" value="51"/>
+                    <StringItem index="52" value="52"/>
+                    <StringItem index="53" value="53"/>
+                    <StringItem index="54" value="54"/>
+                    <StringItem index="55" value="55"/>
+                    <StringItem index="56" value="56"/>
+                    <StringItem index="57" value="57"/>
+                    <StringItem index="58" value="58"/>
+                    <StringItem index="59" value="59"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="33" red="cc" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="NOTE -  * Fields can not be edited for a particular class"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="verticalAlignment" type="int" value="1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbsampm">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="PM"/>
+                    <StringItem index="1" value="AM"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbeampm">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="PM"/>
+                    <StringItem index="1" value="AM"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jScrollPane1" pref="784" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jScrollPane1" alignment="0" pref="536" max="32767" attributes="2"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <Properties>
+            <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tblclass">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="8" rowCount="0">
+                    <Column editable="false" title="C.No" type="java.lang.Object"/>
+                    <Column editable="false" title="Subject" type="java.lang.Object"/>
+                    <Column editable="false" title="Grade" type="java.lang.Object"/>
+                    <Column editable="false" title="Teacher" type="java.lang.Object"/>
+                    <Column editable="false" title="Day" type="java.lang.Object"/>
+                    <Column editable="false" title="S.Time" type="java.lang.Object"/>
+                    <Column editable="false" title="E.Time" type="java.lang.Object"/>
+                    <Column editable="false" title="StartedDate" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="autoResizeMode" type="int" value="0"/>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="100" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="150" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="150" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="200" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblclassMouseClicked"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable(new javax.swing.table.DefaultTableModel()) {&#xa;&#xa;    @Override&#xa;    public void tableChanged(TableModelEvent e) {&#xa;        super.tableChanged(e);&#xa;        repaint();&#xa;    }&#xa;&#xa;    @Override&#xa;    public Component prepareRenderer(TableCellRenderer renderer,&#xa;        int rowIndex, int vColIndex) {&#xa;        Component c = super.prepareRenderer(renderer, rowIndex,&#x9;vColIndex);&#xa;        if(tblclass.getRowCount() &gt; 0){&#xa;            try {&#xa;                java.text.DateFormat d = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xa;                java.util.Date a = d.parse(tblclass.getValueAt(rowIndex, 7).toString());&#xa;                java.util.Date b = new java.util.Date();&#xa;                int k = (int)Math.round((b.getTime() - a.getTime())/(1000*3600*24));&#xa;&#xa;                if(k &lt; 24){&#xa;                    c.setBackground(java.awt.Color.LIGHT_GRAY);&#xa;                    c.setForeground(Color.black);&#xa;                }else{&#xa;                      c.setBackground(getBackground());&#xa;                      c.setForeground(Color.black);&#xa;                }&#xa;            } catch (Exception e) {&#xa;                e.printStackTrace();&#xa;            }&#xa;&#xa;        }&#xa;        return c;&#xa;    }&#xa;}"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
