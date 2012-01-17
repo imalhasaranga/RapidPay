@@ -48,6 +48,7 @@ public final class Mainwindow extends javax.swing.JFrame {
     private AttendanceMarkset atten = null;
     private userloginControl controllog = null;
     private editpesonDetails editperson = null;
+    private rep_mainfinance rep_mainfinance = null;
     private OccationalLogics logics = new OccationalLogics();
     userlogin userlog;
     public static String usrname;
@@ -669,9 +670,9 @@ public final class Mainwindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void bmainrepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmainrepActionPerformed
-
+rep_mainfinance = rep_mainfinance == null ? new rep_mainfinance().mainfinanc() : rep_mainfinance;       
     maintab.removeAll();
-    maintab.add("Main Finance Report", new rep_mainfinance().mainfinanc());
+    maintab.add("Main Finance Report",rep_mainfinance );
 }//GEN-LAST:event_bmainrepActionPerformed
 
 private void miregstudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miregstudentsActionPerformed
