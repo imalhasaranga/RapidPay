@@ -48,6 +48,7 @@ public final class AttendanceMarksetControl {
                     v.add(restl.getString("Fname") + " " + restl.getString("Lname"));
                     v.add(restl.getString("Start_time"));
                     v.add(restl.getString("Ending_time"));
+                    v.add(false);
                     df.addRow(v);
                 }
             }
@@ -60,7 +61,7 @@ public final class AttendanceMarksetControl {
 
     public boolean loadData() {
         int Month = getMonth().getMonth() + 1;
-        int Year = getYear().getYear();
+        int Year = getYearchoes().getYear();
         Collection<Integer> AllowedList = new TreeSet<Integer>();
         try {
             ///All the Paid students
@@ -70,7 +71,7 @@ public final class AttendanceMarksetControl {
             }
 
         } catch (StringIndexOutOfBoundsException e1) {
-            JOptionPane.showMessageDialog(null, "Please slect the classes First", "Class selection failed", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select the classes First", "Class selection failed", JOptionPane.INFORMATION_MESSAGE);
             return false;
         } catch (Exception e) {
             System.out.println(e);
@@ -81,11 +82,12 @@ public final class AttendanceMarksetControl {
     }
 
     public String getQuerypart() {
-        StringBuffer clsId = new StringBuffer();
+        StringBuilder clsId = new StringBuilder();
         for (int i = 0; i < getTable().getRowCount(); i++) {
+            
             boolean b = Boolean.parseBoolean(getTable().getValueAt(i, 6).toString());
             if (b) {
-                clsId.append(getTable().getValueAt(i, 0).toString() + " ,");
+                clsId.append(getTable().getValueAt(i, 0).toString()).append(" ,");
             }
         }
         return clsId.substring(0, clsId.length() - 1);
@@ -95,7 +97,7 @@ public final class AttendanceMarksetControl {
         JList li = getBlocked();
         li.removeAll();
         int Month = getMonth().getMonth() + 1;
-        int Year = getYear().getYear();
+        int Year = getYearchoes().getYear();
         Collection<String> BlockedList = new TreeSet<String>();
         try {
             ResultSet rs2 = DB.getResultset("select user_student as uid1,class_fees, Class_id  from student_class where Class_id IN  ( " + getQuerypart() + " ) ");
@@ -148,7 +150,7 @@ public final class AttendanceMarksetControl {
         this.month = month;
     }
 
-    public JYearChooser getYear() {
+    public JYearChooser getYearchoes() {
         return year;
     }
 
