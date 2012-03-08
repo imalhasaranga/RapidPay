@@ -46,7 +46,7 @@ public final class DB {
     }
 
     public static String lastinsertId(String table, String selectinid, Connection con) throws Exception {
-        
+        System.out.println("select max(" + selectinid + ") as id1 from " + table + " ");
         ResultSet res = con.createStatement().executeQuery("select max(" + selectinid + ") as id1 from " + table + " ");
         if (res.next()) {
             return res.getString("id1") == null ? "0" : res.getString("id1");

@@ -3,10 +3,10 @@ package control;
 import com.toedter.calendar.JMonthChooser;
 import com.toedter.calendar.JYearChooser;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.TreeSet;
-import java.util.Vector;
 import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -41,7 +41,7 @@ public final class AttendanceMarksetControl {
                         "ORDER BY SUBSTRING(Start_time,1,2) * 1 ASC");
                 while (restl.next()) {
                     ++count;
-                    Vector v = new Vector();
+                    ArrayList v = new ArrayList();
                     v.add(restl.getString("class_id"));
                     v.add(restl.getString("Subject_name"));
                     v.add(restl.getString("Grade_name"));
@@ -49,7 +49,7 @@ public final class AttendanceMarksetControl {
                     v.add(restl.getString("Start_time"));
                     v.add(restl.getString("Ending_time"));
                     v.add(false);
-                    df.addRow(v);
+                    df.addRow(v.toArray());
                 }
             }
             classes = count;

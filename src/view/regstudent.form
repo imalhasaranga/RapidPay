@@ -85,7 +85,7 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPanel2" pref="166" max="32767" attributes="2"/>
-                          <Component id="jPanel5" alignment="0" pref="166" max="32767" attributes="2"/>
+                          <Component id="jPanel5" alignment="0" max="32767" attributes="2"/>
                       </Group>
                   </Group>
               </Group>
@@ -190,7 +190,7 @@
                           <EmptySpace min="9" pref="9" max="9" attributes="0"/>
                           <Component id="jLabel2" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="tfname" alignment="0" pref="25" max="32767" attributes="0"/>
+                      <Component id="tfname" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -198,7 +198,7 @@
                           <EmptySpace min="9" pref="9" max="9" attributes="0"/>
                           <Component id="jLabel3" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="tmname" alignment="3" pref="25" max="32767" attributes="0"/>
+                      <Component id="tmname" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -206,7 +206,7 @@
                           <EmptySpace min="9" pref="9" max="9" attributes="0"/>
                           <Component id="jLabel4" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="tlname" alignment="3" pref="25" max="32767" attributes="0"/>
+                      <Component id="tlname" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -214,7 +214,7 @@
                           <EmptySpace min="9" pref="9" max="9" attributes="0"/>
                           <Component id="jLabel5" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="taddno" alignment="3" pref="25" max="32767" attributes="0"/>
+                      <Component id="taddno" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -222,15 +222,15 @@
                           <EmptySpace min="9" pref="9" max="9" attributes="0"/>
                           <Component id="jLabel6" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="tstreet" alignment="3" pref="25" max="32767" attributes="0"/>
+                      <Component id="tstreet" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="9" pref="9" max="9" attributes="0"/>
-                          <Component id="jLabel7" pref="18" max="32767" attributes="0"/>
+                          <Component id="jLabel7" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="tcity" alignment="3" pref="27" max="32767" attributes="0"/>
+                      <Component id="tcity" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -238,13 +238,13 @@
                           <Component id="jLabel8" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="18" max="32767" attributes="1"/>
+                          <EmptySpace max="32767" attributes="1"/>
                           <Component id="dob" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel12" pref="26" max="32767" attributes="0"/>
+                      <Component id="jLabel12" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="tcontact" max="32767" attributes="0"/>
                           <EmptySpace min="3" pref="3" max="3" attributes="0"/>
@@ -427,7 +427,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" max="-2" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jLabel13" linkSize="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -581,21 +581,21 @@
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel15" pref="26" max="32767" attributes="0"/>
-                      <Component id="tguardname" alignment="1" pref="26" max="32767" attributes="0"/>
+                      <Component id="jLabel15" max="32767" attributes="0"/>
+                      <Component id="tguardname" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel16" pref="26" max="32767" attributes="0"/>
-                      <Component id="tguardaddress" alignment="1" pref="26" max="32767" attributes="0"/>
+                      <Component id="jLabel16" max="32767" attributes="0"/>
+                      <Component id="tguardaddress" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel17" pref="26" max="32767" attributes="0"/>
-                      <Component id="tguardcontact" alignment="1" pref="26" max="32767" attributes="0"/>
+                      <Component id="jLabel17" max="32767" attributes="0"/>
+                      <Component id="tguardcontact" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="jSeparator1" pref="4" max="32767" attributes="0"/>
+                  <Component id="jSeparator1" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Component id="jLabel18" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -603,13 +603,13 @@
                       <Component id="tworkaddress" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                          <Component id="jLabel19" pref="22" max="32767" attributes="0"/>
+                          <Component id="jLabel19" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel20" pref="25" max="32767" attributes="0"/>
-                      <Component id="tworkcontact" alignment="1" pref="25" max="32767" attributes="0"/>
+                      <Component id="jLabel20" max="32767" attributes="0"/>
+                      <Component id="tworkcontact" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
@@ -842,7 +842,7 @@
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="ltotalfee" alignment="1" min="-2" pref="27" max="-2" attributes="1"/>
-                      <Component id="jLabel22" pref="27" max="32767" attributes="1"/>
+                      <Component id="jLabel22" max="32767" attributes="1"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1117,7 +1117,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" max="-2" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="cmbclassgrade" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>

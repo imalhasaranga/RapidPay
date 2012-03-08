@@ -6,6 +6,7 @@
 package view;
 
 import Utill.PrintRegBill;
+import com.mysql.jdbc.jdbc2.optional.SuspendableXAConnection;
 import control.OccationalLogics;
 import control.instituteControl;
 import control.regStudentControl;
@@ -20,11 +21,13 @@ import javax.swing.text.JTextComponent;
 
 /**
  *
- * @author  gihan
+ * @author gihan
  */
 public final class regstudent extends javax.swing.JPanel {
 
-    /** Creates new form regstudent */
+    /**
+     * Creates new form regstudent
+     */
     OccationalLogics logics = new OccationalLogics();
     regStudentControl newstudent = new regStudentControl();
     String gardian = "Father";
@@ -60,20 +63,25 @@ public final class regstudent extends javax.swing.JPanel {
 
 
     }
-    
-    
-   PrintRegBill newPrinter =null;
-   public void initializePrinter(){
-     
-        if(newPrinter == null){
-             
-            try{
-             newPrinter = new PrintRegBill(cont);
-            }catch(Exception e){
-            
-                JOptionPane.showMessageDialog(null, "Unable To connect with the Printer program will now terminate!!", "ERROR", JOptionPane.WARNING_MESSAGE);
+    PrintRegBill newPrinter = null;
+
+    public void initializePrinter() {
+
+        if (newPrinter == null) {
+            if (Mainwindow.EnblePrint) {
+                try {
+                    newPrinter = new PrintRegBill(cont);
+                } catch (Exception e) {
+
+                    JOptionPane.showMessageDialog(null, "Unable To connect with the Printer program will now terminate!!", "ERROR", JOptionPane.ERROR_MESSAGE);
+                        System.exit(0);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Currently Printing is not enabled, The registration bill will not print!! "
+                        + "\nto fix this problem go to "
+                        + "\nSystem Management > Advanced Settings > Enable Printing  and put a check mark on the checkbox", "Pringing Disabled", JOptionPane.INFORMATION_MESSAGE);
             }
-        }    
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -164,46 +172,46 @@ public final class regstudent extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(191, 205, 219));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Main Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel2.setText("First Name *");
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel3.setText("Middle Name");
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel4.setText("Last Name");
 
-        tfname.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tfname.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        tmname.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tmname.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        tlname.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tlname.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel5.setText("Address No");
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel6.setText("Street");
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel7.setText("City");
 
-        taddno.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        taddno.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        tstreet.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tstreet.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        tcity.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tcity.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel8.setText("Date of Birth");
 
-        jLabel12.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel12.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel12.setText("Contact No");
 
-        tcontact.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tcontact.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tcontact.setNextFocusableComponent(tschool);
 
-        dob.setFont(new java.awt.Font("Tahoma", 0, 10));
+        dob.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -261,47 +269,47 @@ public final class regstudent extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(tfname, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(tfname))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(tmname, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(tmname, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(tlname, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(tlname, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(taddno, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(taddno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(tstreet, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(tstreet, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 18, Short.MAX_VALUE))
-                    .addComponent(tcity, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(tcity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(dob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(tcontact)
                         .addGap(3, 3, 3)))
@@ -311,16 +319,16 @@ public final class regstudent extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(191, 205, 219));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "School Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel13.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel13.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel13.setText("School");
 
-        jLabel14.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel14.setText("Study Grade");
 
-        tschool.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tschool.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tschool.setNextFocusableComponent(cmbgrade);
 
-        cmbgrade.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbgrade.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbgrade.setNextFocusableComponent(radiofather);
         cmbgrade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,38 +374,38 @@ public final class regstudent extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(191, 205, 219));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Parents/Guardian Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel15.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel15.setText("Name");
 
-        jLabel16.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel16.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel16.setText("Address");
 
-        tguardname.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tguardname.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        tguardaddress.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tguardaddress.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        jLabel17.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel17.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel17.setText("Contact No");
 
-        tguardcontact.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tguardcontact.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        jLabel18.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel18.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Work Place Details");
 
-        tworkcontact.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tworkcontact.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tworkcontact.setNextFocusableComponent(cmbclassgrade);
 
-        tworkaddress.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tworkaddress.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        jLabel19.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel19.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel19.setText("Address");
 
-        jLabel20.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel20.setText("Contact No");
 
         buttonGroup1.add(radiofather);
-        radiofather.setFont(new java.awt.Font("Dialog", 1, 12));
+        radiofather.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         radiofather.setSelected(true);
         radiofather.setText("Father");
         radiofather.addActionListener(new java.awt.event.ActionListener() {
@@ -407,7 +415,7 @@ public final class regstudent extends javax.swing.JPanel {
         });
 
         buttonGroup1.add(radiomother);
-        radiomother.setFont(new java.awt.Font("Dialog", 1, 12));
+        radiomother.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         radiomother.setText("Mother");
         radiomother.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -416,7 +424,7 @@ public final class regstudent extends javax.swing.JPanel {
         });
 
         buttonGroup1.add(radioguard);
-        radioguard.setFont(new java.awt.Font("Dialog", 1, 12));
+        radioguard.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         radioguard.setText("Guardian");
         radioguard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -484,18 +492,18 @@ public final class regstudent extends javax.swing.JPanel {
                     .addComponent(radioguard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(tguardname, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tguardname))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(tguardaddress, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tguardaddress))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(tguardcontact, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tguardcontact))
                 .addGap(27, 27, 27)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 4, Short.MAX_VALUE)
+                .addComponent(jSeparator1)
                 .addGap(11, 11, 11)
                 .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -503,11 +511,11 @@ public final class regstudent extends javax.swing.JPanel {
                     .addComponent(tworkaddress)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)))
+                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                    .addComponent(tworkcontact, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tworkcontact))
                 .addGap(33, 33, 33))
         );
 
@@ -554,10 +562,10 @@ public final class regstudent extends javax.swing.JPanel {
         tblclass1.getColumnModel().getColumn(3).setPreferredWidth(80);
         tblclass1.getColumnModel().getColumn(3).setMaxWidth(80);
 
-        jLabel22.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel22.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel22.setText("Fee");
 
-        bregister.setFont(new java.awt.Font("Dialog", 1, 12));
+        bregister.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         bregister.setText("Register");
         bregister.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -610,7 +618,7 @@ public final class regstudent extends javax.swing.JPanel {
         tblclass2.getColumnModel().getColumn(3).setPreferredWidth(80);
         tblclass2.getColumnModel().getColumn(3).setMaxWidth(80);
 
-        tpaid.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tpaid.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tpaid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tpaid.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -621,26 +629,26 @@ public final class regstudent extends javax.swing.JPanel {
             }
         });
 
-        jLabel23.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel23.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel23.setText("Paid (LKR)");
 
-        lbalance.setFont(new java.awt.Font("Dialog", 1, 12));
+        lbalance.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lbalance.setText("Balance: LKR");
 
-        ltotalfee12.setFont(new java.awt.Font("Dialog", 1, 12));
+        ltotalfee12.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         ltotalfee12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ltotalfee12.setText("0.0");
 
-        balance.setFont(new java.awt.Font("Dialog", 1, 12));
+        balance.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         balance.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         balance.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        ltotalfee.setFont(new java.awt.Font("Dialog", 1, 12));
+        ltotalfee.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         ltotalfee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ltotalfee.setText("0.0");
         ltotalfee.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jcheck.setFont(new java.awt.Font("Tahoma", 1, 12));
+        jcheck.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jcheck.setSelected(true);
         jcheck.setText("New Student");
         jcheck.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -708,7 +716,7 @@ public final class regstudent extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ltotalfee, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tpaid, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
@@ -725,34 +733,34 @@ public final class regstudent extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(191, 205, 219));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Class Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        cmbclassgrade.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbclassgrade.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbclassgrade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbclassgradeActionPerformed(evt);
             }
         });
 
-        jLabel24.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel24.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel24.setText("Grade");
 
-        cmbsubject.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbsubject.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbsubject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbsubjectActionPerformed(evt);
             }
         });
 
-        jLabel25.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel25.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel25.setText("Subject");
 
-        cmbteacher.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbteacher.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbteacher.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbteacherActionPerformed(evt);
             }
         });
 
-        jLabel26.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel26.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel26.setText("Teacher");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -827,7 +835,7 @@ public final class regstudent extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE))))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addContainerGap())
@@ -843,7 +851,7 @@ private void radioguardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 }//GEN-LAST:event_radioguardActionPerformed
 
 private void cmbclassgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbclassgradeActionPerformed
-   logics.LoadComboSubject(cmbsubject, cmbclassgrade);
+    logics.LoadComboSubject(cmbsubject, cmbclassgrade);
     cmbteacherActionPerformed(null);
 }//GEN-LAST:event_cmbclassgradeActionPerformed
 
@@ -865,9 +873,9 @@ private void bregisterMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:e
 private void bregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bregisterActionPerformed
     if (OccationalLogics.CheckValue(tpaid.getText(), ltotalfee.getText())) {
         if (OccationalLogics.showOption("Yes", "No") == 0) {
-            
-            
-            
+
+
+
             newstudent.setFName(tfname.getText());
             newstudent.setMname(tmname.getText());
             newstudent.setLname(tlname.getText());
@@ -903,19 +911,20 @@ private void bregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
 //                    params.put("balnce", (Double.parseDouble(tpaid.getText()) - Double.parseDouble(ltotalfee.getText())) + "");
 //                    params.put("Grade1", cmbgrade.getSelectedItem().toString());
 //                    OccationalLogics.JReport(null, null, 0, params, "studentinvoice2.jrxml", 2, cont);
-                    
-                    newPrinter.setInvoiceid(newstudent.getInvoiceid());
-                    newPrinter.setStudid(uid);
-                    newPrinter.setStname(tfname.getText() + " " + tmname.getText() + " " + tlname.getText());
-                    newPrinter.setStfnam(Mainwindow.usrname);
-                    
-                    newPrinter.setRegfe(ltotalfee.getText());
-                    newPrinter.setPaid(Double.parseDouble(tpaid.getText()) + "");
-                    newPrinter.setBalnce((Double.parseDouble(tpaid.getText()) - Double.parseDouble(ltotalfee.getText())) + "");
-                    newPrinter.setGrade(cmbgrade.getSelectedItem().toString());
-                    newPrinter.StartPrinting();
-                    
-                    
+
+                    if (Mainwindow.EnblePrint) {
+                        initializePrinter();
+                        newPrinter.setInvoiceid(newstudent.getInvoiceid());
+                        newPrinter.setStudid(uid);
+                        newPrinter.setStname(tfname.getText() + " " + tmname.getText() + " " + tlname.getText());
+                        newPrinter.setStfnam(Mainwindow.usrname);
+                        newPrinter.setRegfe(ltotalfee.getText());
+                        newPrinter.setPaid(Double.parseDouble(tpaid.getText()) + "");
+                        newPrinter.setBalnce((Double.parseDouble(tpaid.getText()) - Double.parseDouble(ltotalfee.getText())) + "");
+                        newPrinter.setGrade(cmbgrade.getSelectedItem().toString());
+                        newPrinter.StartPrinting();
+                    }
+
 
                 }
                 OccationalLogics.clearTextFields(comp);

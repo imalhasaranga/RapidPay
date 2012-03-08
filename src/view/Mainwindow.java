@@ -31,7 +31,7 @@ import java.awt.event.KeyEvent;
 
 /**
  *
- * @author  gihan
+ * @author gihan
  */
 public final class Mainwindow extends javax.swing.JFrame {
 
@@ -50,6 +50,7 @@ public final class Mainwindow extends javax.swing.JFrame {
     private editpesonDetails editperson = null;
     private rep_mainfinance rep_mainfinance = null;
     private OccationalLogics logics = new OccationalLogics();
+    public static boolean EnblePrint = true;
     userlogin userlog;
     public static String usrname;
     public static String usrpriv_type;
@@ -85,17 +86,18 @@ public final class Mainwindow extends javax.swing.JFrame {
         CUtils.setIconImage(this);
         searchscoral.setVisible(false);
         logics.loadCategories(cmbsearch);
-        
-        
+
+
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-      setBounds(0,0,screenSize.width, screenSize.height);
+        setBounds(0, 0, screenSize.width, screenSize.height);
 
         jpanelhead.setBackground(Color.LIGHT_GRAY);
         maintab.removeAll();
         maintab.add("Student Fees", fm);
         CUtils.startMemoryMonitor(progres, outof);
         fm.ssearch.grabFocus();
-        setExtendedState(Frame.MAXIMIZED_BOTH);  
+        setExtendedState(Frame.MAXIMIZED_BOTH);
     }
 
     public void logout() {
@@ -168,13 +170,15 @@ public final class Mainwindow extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         miinssum16 = new javax.swing.JMenuItem();
         mnsystem16 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         miusermgt7 = new javax.swing.JMenuItem();
         miinsmgt16 = new javax.swing.JMenuItem();
+        jMenuItem85 = new javax.swing.JMenuItem();
+        EnablePRintChek = new javax.swing.JCheckBoxMenuItem();
         migrademgt16 = new javax.swing.JMenuItem();
         misubjectmgt16 = new javax.swing.JMenuItem();
         miclassmgt16 = new javax.swing.JMenuItem();
         jMenuItem84 = new javax.swing.JMenuItem();
-        jMenuItem85 = new javax.swing.JMenuItem();
         milogout16 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -218,7 +222,7 @@ public final class Mainwindow extends javax.swing.JFrame {
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jLayeredPane1, org.jdesktop.beansbinding.ELProperty.create("${alignmentX}"), jpanelhead, org.jdesktop.beansbinding.BeanProperty.create("alignmentX"));
         bindingGroup.addBinding(binding);
 
-        bmainrep.setFont(new java.awt.Font("Dialog", 1, 12));
+        bmainrep.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         bmainrep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1315676326_finance.png"))); // NOI18N
         bmainrep.setText("Finance Report");
         bmainrep.setPreferredSize(new java.awt.Dimension(107, 25));
@@ -228,7 +232,7 @@ public final class Mainwindow extends javax.swing.JFrame {
             }
         });
 
-        bstudentfees.setFont(new java.awt.Font("Dialog", 1, 12));
+        bstudentfees.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         bstudentfees.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/_billing.png"))); // NOI18N
         bstudentfees.setText("Student Fees");
         bstudentfees.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +241,7 @@ public final class Mainwindow extends javax.swing.JFrame {
             }
         });
 
-        bteacherpay.setFont(new java.awt.Font("Dialog", 1, 12));
+        bteacherpay.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         bteacherpay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/qw.png"))); // NOI18N
         bteacherpay.setText("Teacher Pay");
         bteacherpay.setPreferredSize(new java.awt.Dimension(107, 25));
@@ -248,7 +252,8 @@ public final class Mainwindow extends javax.swing.JFrame {
         });
 
         attendance.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        attendance.setText("Attendance Marking");
+        attendance.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1326818037_attendance_list.png"))); // NOI18N
+        attendance.setText("Attendance ");
         attendance.setPreferredSize(new java.awt.Dimension(107, 25));
         attendance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,12 +263,12 @@ public final class Mainwindow extends javax.swing.JFrame {
 
         jp1.setBackground(new java.awt.Color(127, 157, 185));
 
-        cmbsearch.setFont(new java.awt.Font("Dialog", 1, 11));
+        cmbsearch.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
 
-        cmbtype.setFont(new java.awt.Font("Dialog", 1, 11));
+        cmbtype.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         cmbtype.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "By Name", "By Admmision No" }));
 
-        tsearch.setFont(new java.awt.Font("Dialog", 1, 12));
+        tsearch.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         tsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tsearchActionPerformed(evt);
@@ -278,7 +283,7 @@ public final class Mainwindow extends javax.swing.JFrame {
             }
         });
 
-        bsearch.setFont(new java.awt.Font("Dialog", 0, 10));
+        bsearch.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         bsearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1315720469_search_48.png"))); // NOI18N
         bsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,9 +316,9 @@ public final class Mainwindow extends javax.swing.JFrame {
                     .addGroup(jp1Layout.createSequentialGroup()
                         .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(cmbsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbtype, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                            .addComponent(cmbtype))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tsearch, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)))
+                        .addComponent(tsearch)))
                 .addGap(38, 38, 38))
         );
 
@@ -331,10 +336,13 @@ public final class Mainwindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bteacherpay, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(attendance, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                .addComponent(attendance, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addComponent(jp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        jpanelheadLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {attendance, bmainrep, bstudentfees, bteacherpay});
+
         jpanelheadLayout.setVerticalGroup(
             jpanelheadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpanelheadLayout.createSequentialGroup()
@@ -373,16 +381,16 @@ public final class Mainwindow extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 180, 209));
 
-        progres.setFont(new java.awt.Font("Tahoma", 0, 10));
+        progres.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         progres.setBorderPainted(false);
         progres.setPreferredSize(new java.awt.Dimension(146, 11));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 10));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Memory Usage >");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        outof.setFont(new java.awt.Font("Tahoma", 0, 10));
+        outof.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         outof.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         outof.setText("  ");
         outof.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -401,18 +409,16 @@ public final class Mainwindow extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 14, Short.MAX_VALUE)
-                    .addComponent(outof, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
-            .addComponent(progres, javax.swing.GroupLayout.DEFAULT_SIZE, 14, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(outof, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(progres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, outof, progres});
 
         jMenuBar.setBorder(null);
-        jMenuBar.setFont(new java.awt.Font("Dialog", 1, 14));
+        jMenuBar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         mnregister16.setText("Register");
 
@@ -581,13 +587,15 @@ public final class Mainwindow extends javax.swing.JFrame {
             }
         });
 
+        jMenu4.setText("Advanced Settings");
+
         miusermgt7.setText("User Manage");
         miusermgt7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 miusermgtActionPerformed(evt);
             }
         });
-        mnsystem16.add(miusermgt7);
+        jMenu4.add(miusermgt7);
 
         miinsmgt16.setText("Institute Details");
         miinsmgt16.addActionListener(new java.awt.event.ActionListener() {
@@ -595,7 +603,28 @@ public final class Mainwindow extends javax.swing.JFrame {
                 miinsmgtActionPerformed(evt);
             }
         });
-        mnsystem16.add(miinsmgt16);
+        jMenu4.add(miinsmgt16);
+
+        jMenuItem85.setText("Speedup system");
+        jMenuItem85.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem85);
+
+        EnablePRintChek.setSelected(true);
+        EnablePRintChek.setText("Enable Printing  ");
+        EnablePRintChek.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        EnablePRintChek.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EnablePRintChek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnablePRintChekActionPerformed(evt);
+            }
+        });
+        jMenu4.add(EnablePRintChek);
+
+        mnsystem16.add(jMenu4);
 
         migrademgt16.setText("Grades");
         migrademgt16.addActionListener(new java.awt.event.ActionListener() {
@@ -628,14 +657,6 @@ public final class Mainwindow extends javax.swing.JFrame {
             }
         });
         mnsystem16.add(jMenuItem84);
-
-        jMenuItem85.setText("Speedup system");
-        jMenuItem85.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        mnsystem16.add(jMenuItem85);
 
         milogout16.setText("Logout");
         milogout16.addActionListener(new java.awt.event.ActionListener() {
@@ -670,9 +691,9 @@ public final class Mainwindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void bmainrepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmainrepActionPerformed
-rep_mainfinance = rep_mainfinance == null ? new rep_mainfinance().mainfinanc() : rep_mainfinance;       
+    rep_mainfinance = rep_mainfinance == null ? new rep_mainfinance().mainfinanc() : rep_mainfinance;
     maintab.removeAll();
-    maintab.add("Main Finance Report",rep_mainfinance );
+    maintab.add("Main Finance Report", rep_mainfinance);
 }//GEN-LAST:event_bmainrepActionPerformed
 
 private void miregstudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miregstudentsActionPerformed
@@ -775,8 +796,8 @@ private void bteacherpayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 
 private void attendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attendanceActionPerformed
 maintab.removeAll();//GEN-LAST:event_attendanceActionPerformed
-atten = atten == null ? new AttendanceMarkset() : atten;       
-maintab.add("Attendance marking", atten);
+        atten = atten == null ? new AttendanceMarkset() : atten;
+        maintab.add("Attendance marking", atten);
 
     }
 
@@ -861,7 +882,6 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 }//GEN-LAST:event_jMenuItem3ActionPerformed
 
 private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-   
 }//GEN-LAST:event_jMenuItem4ActionPerformed
 
 private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -879,22 +899,25 @@ private void windowMinmaizedOrMaximied(java.awt.event.WindowEvent evt) {//GEN-FI
 }//GEN-LAST:event_windowMinmaizedOrMaximied
 
 private void jMenuItem3ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed1
- DevalopmentReports report = new DevalopmentReports();
+    DevalopmentReports report = new DevalopmentReports();
     report.getRepdetails().setText("Total number of registered students Fluctuation  during  the year");
     report.setReportname("Student_reg_fluck.jrxml");
     report.setVisible(true);
 }//GEN-LAST:event_jMenuItem3ActionPerformed1
 
 private void jMenuItem1ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed1
-maintab.removeAll();
+    maintab.removeAll();
     maintab.add("Day By Day Report", new rep_pay_day_by_day());
 }//GEN-LAST:event_jMenuItem1ActionPerformed1
 
+    private void EnablePRintChekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnablePRintChekActionPerformed
+        Mainwindow.EnblePrint = EnablePRintChek.isSelected();
+    }//GEN-LAST:event_EnablePRintChekActionPerformed
     /**
      * @param args the command line arguments
      */
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBoxMenuItem EnablePRintChek;
     private javax.swing.JButton attendance;
     private javax.swing.JButton bmainrep;
     private javax.swing.JButton bsearch;
@@ -909,6 +932,7 @@ maintab.removeAll();
     private javax.swing.JMenu jMenu17;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
@@ -951,6 +975,7 @@ maintab.removeAll();
     private javax.swing.JTextField tsearch;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
+
     public void setRs(regstudent rs) {
         this.rs = rs;
     }

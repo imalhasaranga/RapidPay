@@ -38,7 +38,7 @@ public class JPOSPrinter {
 
     public JPOSPrinter() {}
 
-    public JPOSPrinter(instituteControl controlins) {
+    public JPOSPrinter(instituteControl controlins) throws Exception{
 
         this.controlins = controlins;
         da = new SimpleDateFormat("yyyy/MM/dd");
@@ -56,16 +56,18 @@ public class JPOSPrinter {
 
             } catch (JposException ex) {
                 JOptionPane.showMessageDialog(null, "The port name is illegal. or couldn't be connected to the device", "", JOptionPane.WARNING_MESSAGE);
-                ex.printStackTrace();
-                System.exit(0);
+               // ex.printStackTrace();
+                throw ex;
+                
             }
             try {
                 //Enable the device.           
                 ptr.setDeviceEnabled(true);
             } catch (JposException ex) {
-                System.out.println(ex);
+                //System.out.println(ex);
                 JOptionPane.showMessageDialog(null, "Can not Enable The Printer Connected, internal Error Occured, Please Call for Maintanace", "", JOptionPane.WARNING_MESSAGE);
-                System.exit(0);
+                throw ex;
+               
             }
             try {
                 //Even if using any printers, 0.01mm unit makes it possible to print neatly.

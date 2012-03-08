@@ -15,8 +15,10 @@ import model.DB;
  */
 public final class PrintRegBill extends JPOSPrinter {
 
-    public PrintRegBill(instituteControl controlins) {
+    public PrintRegBill(instituteControl controlins) throws Exception {
+       
         super(controlins);
+       
     }
     
     

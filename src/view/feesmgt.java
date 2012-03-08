@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author  Imal
+ * @author Imal
  */
 public final class feesmgt extends javax.swing.JPanel {
 
@@ -29,28 +29,33 @@ public final class feesmgt extends javax.swing.JPanel {
         "June", "July", "August", "September", "October",
         "November", "December"
     };
-    JPOSPrinter newPrinter =null;
+    JPOSPrinter newPrinter = null;
 
-    private void initializePrinter(){
-     
-        if(newPrinter == null){
-             
-             newPrinter = new JPOSPrinter(cont1);
-             
-        }    
-    }
-    
-    
-    public void PrintTop(String StuName, String Stuid) {
-        initializePrinter();
-        if (onsearchPrint.isSelected()) {
-            newPrinter.setStname(StuName);
-            newPrinter.setStudid(Stuid);
-            newPrinter.setTopPrint(false);
-            newPrinter.printTopPart();
+    private void initializePrinter() {
+        if (Mainwindow.EnblePrint) {
+            if (newPrinter == null) {
+                try {
+                    newPrinter = new JPOSPrinter(cont1);
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Unable To connect with the Printer program will now terminate!!", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    System.exit(0);
+                }
+            }
 
         }
+    }
 
+    public void PrintTop(String StuName, String Stuid) {
+        if (Mainwindow.EnblePrint) {
+            initializePrinter();
+            if (onsearchPrint.isSelected()) {
+                newPrinter.setStname(StuName);
+                newPrinter.setStudid(Stuid);
+                newPrinter.setTopPrint(false);
+                newPrinter.printTopPart();
+
+            }
+        }
     }
 
     public feesmgt() {
@@ -59,7 +64,7 @@ public final class feesmgt extends javax.swing.JPanel {
         load();
         try {
             cont1 = cont1.getInstitute(0);
-            
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -718,21 +723,22 @@ private void bpayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:ev
                     userid = cont.searchByUserid(userid, studentnam, payamut, cmbmonth, tblclass, ltotal, luptodatepay, lbalancefor, lastpaidmonth);
                     cont.calculateInsandLecFee(userid);
 
+                    if (Mainwindow.EnblePrint) {
+                        initializePrinter();
+                        newPrinter.setStname(studentnam.getText());
+                        newPrinter.setStudid(userid);
+                        newPrinter.setInvoiceid(cont.getInvoiceid());
+                        newPrinter.setMonth(lastpaidmonth.getText());
+                        newPrinter.setStfnam(Mainwindow.usrname);
+                        newPrinter.setRegfe(ltotal.getText());
+                        newPrinter.setPaid(cont.Institutefee1 + "");
+                        newPrinter.setLectureFee(cont.LectureFee1 + "");
+                        newPrinter.setBalnce(lbalancefor.getText());
+                        newPrinter.setBlance1(balnce.getText());
+                        newPrinter.setCash(Double.parseDouble(tpaid.getText()) + "");
+                        newPrinter.StartPrinting();
+                    }
 
-                    newPrinter.setStname(studentnam.getText());
-                    newPrinter.setStudid(userid);
-                    newPrinter.setInvoiceid(cont.getInvoiceid());
-                    newPrinter.setMonth(lastpaidmonth.getText());
-                    newPrinter.setStfnam(Mainwindow.usrname);
-                    newPrinter.setRegfe(ltotal.getText());
-                    newPrinter.setPaid(cont.Institutefee1 + "");
-                    newPrinter.setLectureFee(cont.LectureFee1 + "");
-                    newPrinter.setBalnce(lbalancefor.getText());
-                    newPrinter.setBlance1(balnce.getText());
-                    newPrinter.setCash(Double.parseDouble(tpaid.getText()) + "");
-                    newPrinter.StartPrinting();
-
-                    
                     JOptionPane.showMessageDialog(null, "Payment successfully added", "Payment", JOptionPane.INFORMATION_MESSAGE);
 
                     count = 0;
@@ -830,7 +836,7 @@ private void cmbmonthKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
 
     if (evt.getKeyCode() == 39) {
         cmbmonth.setSelectedIndex(2);
-    //cmbmonthActionPerformed(null);
+        //cmbmonthActionPerformed(null);
     } else if (evt.getKeyCode() == 37) {
         System.out.println(evt.getKeyCode());
         cmbmonth.setSelectedIndex(0);
@@ -859,9 +865,10 @@ private void tsidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:ev
 
 private void onsearchPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onsearchPrintActionPerformed
     initializePrinter();
+    if (Mainwindow.EnblePrint) {
     newPrinter.setTopPrint(onsearchPrint.isSelected());
+    }
 }//GEN-LAST:event_onsearchPrintActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel balnce;
     private javax.swing.JButton bpay;
