@@ -55,14 +55,16 @@ public final class Mainwindow extends javax.swing.JFrame {
     public static String usrname;
     public static String usrpriv_type;
     public static String UserStaffID;
+    public static String logtime;
     Mainwindow home;
 
-    public void securelogin(String usrname, String usrpriv_type, String usrmainid, Mainwindow home, userlogin log) {
+    public void securelogin(String usrname, String usrpriv_type, String usrmainid, Mainwindow home, userlogin log,String logtime) {
         this.home = home;
         Mainwindow.usrname = usrname;
         userlog = log;
         Mainwindow.usrpriv_type = usrpriv_type;
         Mainwindow.UserStaffID = usrmainid;
+        Mainwindow.logtime = logtime;
         home.setTitle("Sathara Institute of Education (Pvt) Ltd /current user : " + Mainwindow.usrname);
         home.repaint();
         setMan(new usermanage());
@@ -102,7 +104,7 @@ public final class Mainwindow extends javax.swing.JFrame {
 
     public void logout() {
 
-        getControllog().sayLogout(UserStaffID);
+        getControllog().sayLogout();
         this.setVisible(false);
         userlog.getPassword().setText("");
         userlog.status.setText("");
