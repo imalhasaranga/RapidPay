@@ -24,11 +24,7 @@ public final class feesmgt extends javax.swing.JPanel {
     instituteControl cont1 = new instituteControl();
     String userid = null;
     private double count;
-    String months[] = {
-        " ", "January", "February", "March", "April", "May",
-        "June", "July", "August", "September", "October",
-        "November", "December"
-    };
+    
     JPOSPrinter newPrinter = null;
 
     private void initializePrinter() {
@@ -829,7 +825,8 @@ private void jpropchange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_
 }//GEN-LAST:event_jpropchange
 
 private void monthvalPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_monthvalPropertyChange
-    monthval.setText(months[Integer.parseInt(lastpaidmonth.getText())]);
+    
+    monthval.setText(OccationalLogics.getMonth(Integer.parseInt(lastpaidmonth.getText())));
 }//GEN-LAST:event_monthvalPropertyChange
 
 private void cmbmonthKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbmonthKeyPressed
