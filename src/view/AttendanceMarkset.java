@@ -47,15 +47,13 @@ public final class AttendanceMarkset extends javax.swing.JPanel {
         selecclass = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         cmbday = new javax.swing.JComboBox();
-        jButton1 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         blockedlist = new javax.swing.JList();
-        jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         classes = new javax.swing.JLabel();
         year = new com.toedter.calendar.JYearChooser();
         month = new com.toedter.calendar.JMonthChooser();
-        jButton3 = new javax.swing.JButton();
+        loadBolckedLit = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -99,11 +97,11 @@ public final class AttendanceMarkset extends javax.swing.JPanel {
         selecclass.getColumnModel().getColumn(4).setPreferredWidth(100);
         selecclass.getColumnModel().getColumn(5).setPreferredWidth(100);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Select The Day :");
 
-        cmbday.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbday.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbday.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }));
         cmbday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,30 +109,21 @@ public final class AttendanceMarkset extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("Upload Data to The  Fringerprint machine");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jScrollPane3.setViewportView(blockedlist);
 
-        jButton2.setText("View Blocked");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Classes");
 
-        classes.setFont(new java.awt.Font("Tahoma", 1, 11));
+        classes.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         classes.setText(" ");
 
-        month.setFont(new java.awt.Font("Dialog", 1, 12));
+        month.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
 
-        jButton3.setText("Load Bloacked List >>");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        loadBolckedLit.setText("Load Bloacked List >>");
+        loadBolckedLit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                loadBolckedLitActionPerformed(evt);
             }
         });
 
@@ -171,12 +160,8 @@ public final class AttendanceMarkset extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 943, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(loadBolckedLit, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 943, Short.MAX_VALUE))
@@ -202,16 +187,11 @@ public final class AttendanceMarkset extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3)
+                            .addComponent(loadBolckedLit)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)))
                 .addComponent(jLabel3)
                 .addContainerGap())
         );
@@ -220,28 +200,21 @@ public final class AttendanceMarkset extends javax.swing.JPanel {
 
     }// </editor-fold>//GEN-END:initComponents
 
-private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-// TODO add your handling code here:
-}//GEN-LAST:event_jButton1ActionPerformed
-
 private void cmbdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbdayActionPerformed
 
     controlatten.loadClassoftheday();
     classes.setText(controlatten.classes+"");
 }//GEN-LAST:event_cmbdayActionPerformed
 
-private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+private void loadBolckedLitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadBolckedLitActionPerformed
     controlatten.loadData();
-}//GEN-LAST:event_jButton3ActionPerformed
+}//GEN-LAST:event_loadBolckedLitActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList blockedlist;
     private javax.swing.JLabel classes;
     private javax.swing.JComboBox cmbday;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -249,6 +222,7 @@ private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JButton loadBolckedLit;
     private com.toedter.calendar.JMonthChooser month;
     private javax.swing.JTable selecclass;
     private com.toedter.calendar.JYearChooser year;
