@@ -310,12 +310,14 @@ public final class regStudentControl {
 
             try {
                 Connection con = DB.getmyCon();
-                con.setAutoCommit(false);
+                
                 ResultSet usertype = con.createStatement().executeQuery("select user_typeid from user_type where user_type ='Student'");
                 if (usertype.next()) {
                     usertypei = usertype.getString("user_typeid");
                 }
-
+                
+                con.setAutoCommit(false);//----------------------------------------------------------//
+                    
                 String Dob = da.format(stud.getDob());
                 Statement st = con.createStatement();
                 st.executeUpdate("insert into user_main(Fname,Mname,Lname,adress_num,Street,City,Dob,contact_number,is_active,User_type_id,Registration_date)" +
@@ -332,19 +334,25 @@ public final class regStudentControl {
                         "values('" + stud.getSchool() + "','" + stud.getStudyGrade() + "','" + stud.getGardien() + "','" + lastid + "','" + stud.getGName() + "','" + stud.getGAddress() + "','" + stud.getGcontact() +
                         "','" + stud.getGWAddress() + "','" + stud.getGWcontact() + "','" + stud.getStaffreg() + "')");
 
+                con.commit();
+                con.setAutoCommit(true); //------------------------------------------------------------//
+                
 
-                String lastinvoiceid = DB.lastinsertId("payment_invoice_student", "Invoice_id", con);
+                String lastinvoiceid = DB.lastinsertId("payment_invoice_student", "Invoice_id"); //// PROBLEM OCCURING CODE LINE ///////////////
                 lastinvoiceid = (lastinvoiceid == null) ? "1" : "" + (Integer.parseInt(lastinvoiceid) + 1);
                 setInvoiceid(lastinvoiceid + "");
+                
+                con.setAutoCommit(false); //--------------------------------------------------------------//
                 for (int i = 0; i < df.getRowCount(); i++) {
 
                     con.createStatement().executeUpdate("insert into student_class(user_student,class_id,class_fees,is_active) values('" + lastid + "','" + df.getValueAt(i, 0).toString() + "','" + df.getValueAt(i, 4).toString() + "','1')");
                     if (bool) {
                         con.createStatement().executeUpdate("insert into payment_invoice_student(Invoice_id,user_student_id,class_id,class_fees,month,user_stafff,pay_type,Date_Time) values('" + lastinvoiceid + "','" + lastid + "','" + df.getValueAt(i, 0).toString() + "','" + df.getValueAt(i, 3).toString() + "','" + new SimpleDateFormat("MMM").format(today) + "','" + Mainwindow.UserStaffID + "','Admission','" + da.format(today) + "')");
                     }
+                    con.commit();
                 }
-                con.commit();
-                con.setAutoCommit(true);
+                
+                con.setAutoCommit(false); //-----------------------------------------------------------------//
                 con = null;
                 wthp = true;
             } catch (Exception e) {

@@ -182,22 +182,6 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="419"
-						y="5"
-						width="115"
-						height="18"
-						forecolor="#000000"
-						backcolor="#F2F5F0"
-						key="staticText-21"/>
-					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" isBold="true"/>
-					</textElement>
-				<text><![CDATA[G / P Work Address]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						mode="Opaque"
 						x="53"
 						y="5"
 						width="93"
@@ -214,7 +198,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="249"
+						x="364"
 						y="5"
 						width="92"
 						height="18"
@@ -230,7 +214,7 @@
 				<staticText>
 					<reportElement
 						mode="Opaque"
-						x="341"
+						x="456"
 						y="5"
 						width="78"
 						height="18"
@@ -248,7 +232,7 @@
 						mode="Opaque"
 						x="146"
 						y="5"
-						width="103"
+						width="218"
 						height="18"
 						forecolor="#000000"
 						backcolor="#F2F5F0"
@@ -293,7 +277,7 @@
 					<reportElement
 						x="149"
 						y="0"
-						width="99"
+						width="215"
 						height="12"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -304,7 +288,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="253"
+						x="368"
 						y="0"
 						width="88"
 						height="12"
@@ -317,7 +301,7 @@
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="342"
+						x="457"
 						y="0"
 						width="76"
 						height="12"
@@ -327,19 +311,6 @@
 						<font size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{COLUMN_5}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="419"
-						y="0"
-						width="116"
-						height="12"
-						key="textField"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font size="9"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{COLUMN_6}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

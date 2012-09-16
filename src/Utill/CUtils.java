@@ -1,10 +1,11 @@
-
 package Utill;
 
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Toolkit;
 import java.awt.print.PrinterJob;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.print.PrintService;
 import javax.print.attribute.HashPrintRequestAttributeSet;
 import javax.print.attribute.PrintRequestAttributeSet;
@@ -47,31 +48,35 @@ public final class CUtils {
 
         Thread t = new Thread(new Runnable() {
 
-            int leftmem = 0;
-
+            @Override
             public void run() {
-                try {
+                Timer t1 = new Timer();
+                t1.scheduleAtFixedRate(new TimerTask() {
 
-                    while (true) {
-                        long heapSize = Runtime.getRuntime().totalMemory() / (1024 * 1024);
-                        long heapFreeSize = Runtime.getRuntime().freeMemory() / (1024 * 1024);
-                        long heapMaxSize = Runtime.getRuntime().maxMemory() / (1024 * 1024);
-                        leftmem = (int) ((heapSize - heapFreeSize) * 100 / heapSize);
+                    int leftmem = 0;
 
-                        progress.setValue(leftmem);
-                        jlb.setText("(" + heapSize + "," + heapMaxSize + ")");
-                        if (heapMaxSize - heapSize < 11) {
+                    @Override
+                    public void run() {
+                        try {
 
-                            JOptionPane.showMessageDialog(null, "Sorry Application Should be restarted", "Memeory dump", JOptionPane.WARNING_MESSAGE);
-                            System.exit(0);
+                            long heapSize = Runtime.getRuntime().totalMemory() / (1024 * 1024);
+                            long heapFreeSize = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+                            long heapMaxSize = Runtime.getRuntime().maxMemory() / (1024 * 1024);
+                            leftmem = (int) ((heapSize - heapFreeSize) * 100 / heapSize);
+
+                            progress.setValue(leftmem);
+                            jlb.setText("(" + heapSize + "," + heapMaxSize + ")");
+                            if (heapMaxSize - heapSize < 11) {
+
+                                JOptionPane.showMessageDialog(null, "Sorry Application Should be restarted", "Memeory dump", JOptionPane.WARNING_MESSAGE);
+                                System.exit(0);
+                            }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-
-                        Thread.sleep(100);
                     }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                }, 2000, 1000);
             }
         });
 

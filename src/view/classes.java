@@ -117,13 +117,13 @@ public final class classes extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(191, 205, 219));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true), "Fees Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel31.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel31.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel31.setText("<html>Teacher Percentage<font color=\"Red\">*</font> </html>");
 
-        jLabel32.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel32.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel32.setText("Institute Percentage");
 
-        cmbtpercent.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbtpercent.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbtpercent.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90" }));
         cmbtpercent.setSelectedItem("60");
         cmbtpercent.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +137,7 @@ public final class classes extends javax.swing.JPanel {
             }
         });
 
-        tadmission.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tadmission.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tadmission.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tadmission.setText("575");
         tadmission.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -146,10 +146,10 @@ public final class classes extends javax.swing.JPanel {
             }
         });
 
-        jLabel34.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel34.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel34.setText("<html>\nMonthly Fees<font color=\"Red\">*</font> \n</html>");
 
-        tmonthly.setFont(new java.awt.Font("Times New Roman", 1, 14));
+        tmonthly.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tmonthly.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tmonthly.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -157,7 +157,7 @@ public final class classes extends javax.swing.JPanel {
             }
         });
 
-        bcreate.setFont(new java.awt.Font("Dialog", 1, 12));
+        bcreate.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         bcreate.setText("Create");
         bcreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +165,7 @@ public final class classes extends javax.swing.JPanel {
             }
         });
 
-        bedit.setFont(new java.awt.Font("Dialog", 1, 12));
+        bedit.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         bedit.setText("Edit");
         bedit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,14 +173,14 @@ public final class classes extends javax.swing.JPanel {
             }
         });
 
-        linspercentage.setFont(new java.awt.Font("Dialog", 1, 12));
+        linspercentage.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         linspercentage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linspercentage.setText("40");
 
-        jLabel35.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel35.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel35.setText("<html>Starting/Started Date <font color=\"Red\"></font>  </html>");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("DeActivate");
         jButton1.setToolTipText("<html>\n<b>DeActivate</b><br/>\nBy clicking this button after selecting a class from the table<br/>\nYou can Remove that class from the class table, so that class will not be<br/>\nuse again\n\n</html>");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +189,7 @@ public final class classes extends javax.swing.JPanel {
             }
         });
 
-        deleteclass.setFont(new java.awt.Font("Tahoma", 1, 11));
+        deleteclass.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         deleteclass.setText("Delete New Class");
         deleteclass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,9 +223,7 @@ public final class classes extends javax.swing.JPanel {
                                         .addComponent(linspercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(tadmission, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(startdate, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
+                            .addComponent(startdate, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -246,12 +244,12 @@ public final class classes extends javax.swing.JPanel {
                 .addGap(22, 22, 22)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel31)
+                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(jLabel34))
+                        .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(linspercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbtpercent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -260,7 +258,7 @@ public final class classes extends javax.swing.JPanel {
                             .addComponent(tmonthly, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
+                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(startdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -276,70 +274,70 @@ public final class classes extends javax.swing.JPanel {
         jPanel4.setBackground(new java.awt.Color(191, 205, 219));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true), "Fees Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel21.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel21.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel21.setText("<html> Select the Grade <font color=\"Red\">*</font> </html>");
 
-        cmbgrade.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbgrade.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
 
-        cmbsubject.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbsubject.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
 
-        cmbshour.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbshour.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbshour.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
 
-        jLabel22.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel22.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel22.setText("<html> Select the Subject <font color=\"Red\">*</font> </html>");
 
-        jLabel23.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel23.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel23.setText("<html> Select the Teacher <font color=\"Red\">*</font> </html>");
 
-        cmbteacher.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbteacher.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbteacher.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbteacherActionPerformed(evt);
             }
         });
 
-        lteacherno.setFont(new java.awt.Font("Dialog", 1, 12));
+        lteacherno.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lteacherno.setText("Teacher No:");
 
-        jLabel25.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel25.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel25.setText("Class held Day");
 
-        cmbday.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbday.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbday.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }));
 
-        jLabel26.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel26.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel26.setText("Class Time");
 
-        cmbsminute.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbsminute.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbsminute.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "01", "0 2", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
 
-        jLabel27.setFont(new java.awt.Font("Dialog", 1, 12));
+        jLabel27.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("To");
 
-        cmbehour.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbehour.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbehour.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
 
-        cmbeminute.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbeminute.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbeminute.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
 
-        lbl.setFont(new java.awt.Font("Dialog", 1, 12));
+        lbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lbl.setForeground(new java.awt.Color(204, 51, 0));
         lbl.setText("NOTE -  * Fields can not be edited for a particular class");
         lbl.setToolTipText("");
         lbl.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        cmbsampm.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbsampm.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbsampm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PM", "AM" }));
 
-        cmbeampm.setFont(new java.awt.Font("Dialog", 1, 12));
+        cmbeampm.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         cmbeampm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PM", "AM" }));
 
-        lbl1.setFont(new java.awt.Font("Dialog", 1, 12));
+        lbl1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lbl1.setText(" ");
 
-        lbl2.setFont(new java.awt.Font("Dialog", 1, 12));
+        lbl2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lbl2.setText(" ");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -393,23 +391,23 @@ public final class classes extends javax.swing.JPanel {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(cmbgrade))
+                                .addComponent(jLabel21))
+                            .addComponent(cmbgrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(17, 17, 17)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(cmbsubject))
+                                .addComponent(jLabel22))
+                            .addComponent(cmbsubject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(cmbteacher))))
+                                .addComponent(jLabel23))
+                            .addComponent(cmbteacher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmbday))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -420,7 +418,7 @@ public final class classes extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 16, Short.MAX_VALUE))
+                    .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbeampm)

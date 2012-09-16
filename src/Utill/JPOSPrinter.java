@@ -218,7 +218,6 @@ public class JPOSPrinter {
     public String getLine(int linechars) {
         String line = "";
         for (int i = 0; i < linechars; i++) {
-
             line += "-";
         }
         return line;

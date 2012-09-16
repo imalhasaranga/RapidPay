@@ -276,7 +276,7 @@ public final class teacherpayControl {
         try {
             con = DB.getmyCon();
             con.setAutoCommit(false);
-            String id = DB.lastinsertId("teacher_payment", "inovoice_num", con);
+            String id = DB.lastinsertId("teacher_payment", "inovoice_num"); //--------------- DANGER CODINGS --------------
             int i = id == null ? 1 : Integer.parseInt(id) + 1;
 
             con.createStatement().executeUpdate("insert into teacher_payment(year,teacher_id,month,full_amount,advance,balance,advance_payied_date,balance_payid_by_user_staff,advance_payied_by_user_staff,inovoice_num, balnace_payied_date) " + "values('" + year + "','" + teacherid + "','" + month + "','" + fullamount + "','" + advance + "','" + balnce + "','" + (date.toString() + " " + advance) + "','" + userstaf + "','" + userstaf + "','" + i + "', '" + date + "' )");

@@ -14,20 +14,19 @@ import model.Databaseconfig;
 
 /**
  *
- * @author  gihan
+ * @author gihan
  */
 public final class userlogin extends javax.swing.JFrame {
-    Databaseconfig config = new Databaseconfig();
-    userloginControl  usrlog = new userloginControl();
-  Mainwindow mainwin;
-    
-    
-    
+
+    Databaseconfig config = new Databaseconfig(Databaseconfig.DB_CONNECTION_AVILABLE);
+    userloginControl usrlog = new userloginControl();
+    Mainwindow mainwin;
+
     public userlogin(Mainwindow mainwin) {
         initComponents();
         CUtils.setIconImage(this);
-       this.mainwin =mainwin;
-      username.grabFocus();
+        this.mainwin = mainwin;
+        username.grabFocus();
     }
 
     @SuppressWarnings("unchecked")
@@ -39,6 +38,7 @@ public final class userlogin extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         status = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         panel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,11 +85,19 @@ public final class userlogin extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 30, 20));
 
-        status.setFont(new java.awt.Font("Arial", 1, 12));
+        status.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         status.setForeground(new java.awt.Color(184, 17, 17));
         status.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         status.setText(" ");
         getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 300, 20));
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1342454217_preferences-system-time.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 290, 30, 20));
 
         panel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gt-202-login.jpg"))); // NOI18N
         getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 330));
@@ -99,58 +107,58 @@ public final class userlogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    if (usrlog.checkLogin(username.getText().replace("'", ""), new String(password.getPassword()).replace("'", ""),this,mainwin)) {
+    if (usrlog.checkLogin(username.getText().replace("'", ""), new String(password.getPassword()).replace("'", ""), this, mainwin)) {
         status.setText("Unable to login, Check your login details");
-    }else{
+    } else {
 
         this.dispose();
     }
-    
+
 }//GEN-LAST:event_jButton1ActionPerformed
 
 private void usernameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyReleased
-   if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-   jButton1ActionPerformed(null);
-   }
-   
-   OccationalLogics.ballonTool(username, this, rootPaneCheckingEnabled, "Caps look On");
+    if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+        jButton1ActionPerformed(null);
+    }
+
+    OccationalLogics.ballonTool(username, this, rootPaneCheckingEnabled, "Caps look On");
 }//GEN-LAST:event_usernameKeyReleased
 
 private void passwordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyReleased
-   if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+    if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
 
-   jButton1ActionPerformed(null);
-   }
-   
-   OccationalLogics.ballonTool(password, this, rootPaneCheckingEnabled, "Caps look On");
+        jButton1ActionPerformed(null);
+    }
+
+    OccationalLogics.ballonTool(password, this, rootPaneCheckingEnabled, "Caps look On");
 }//GEN-LAST:event_passwordKeyReleased
 
 private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-config.setVisible(true);
+    config.setVisible(true);
 }//GEN-LAST:event_jButton2ActionPerformed
 
 private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
 // TODO add your handling code here:
 }//GEN-LAST:event_usernameActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new BarcodeAttendance().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-   
-    public JPasswordField getPassword(){
-    
+    public JPasswordField getPassword() {
+
         return password;
     }
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel panel;
     private javax.swing.JPasswordField password;
     public javax.swing.JLabel status;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
-
-    
 }

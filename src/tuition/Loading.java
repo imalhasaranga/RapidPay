@@ -46,7 +46,7 @@ public  final class Loading extends javax.swing.JFrame {
         } catch (Exception e) {
                        
             JOptionPane.showMessageDialog(null, "Due to internal Db connection error, application will need to reconfigure, \n please start again after changes", "Connection Config", WIDTH);
-            new Databaseconfig().setVisible(true);
+            new Databaseconfig(Databaseconfig.DB_CONNECTION_UNAVILABLE).setVisible(true);
             dispose();
         }
     }

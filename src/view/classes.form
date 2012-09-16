@@ -9,6 +9,7 @@
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
@@ -115,10 +116,7 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="startdate" min="-2" pref="218" max="-2" attributes="1"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="startdate" alignment="0" min="-2" pref="218" max="-2" attributes="1"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -148,7 +146,7 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel32" alignment="3" pref="22" max="32767" attributes="1"/>
+                                  <Component id="jLabel32" alignment="3" max="32767" attributes="1"/>
                                   <Component id="linspercentage" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                                   <Component id="cmbtpercent" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -479,7 +477,7 @@
                                       <EmptySpace min="6" pref="6" max="6" attributes="0"/>
                                       <Component id="jLabel21" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="cmbgrade" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="cmbgrade" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -487,7 +485,7 @@
                                       <EmptySpace min="6" pref="6" max="6" attributes="0"/>
                                       <Component id="jLabel22" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="cmbsubject" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="cmbsubject" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -495,13 +493,13 @@
                                       <EmptySpace min="6" pref="6" max="6" attributes="0"/>
                                       <Component id="jLabel23" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="cmbteacher" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="cmbteacher" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel25" pref="22" max="32767" attributes="0"/>
+                          <Component id="jLabel25" max="32767" attributes="0"/>
                           <Component id="cmbday" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -514,7 +512,7 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel26" alignment="3" max="32767" attributes="0"/>
-                          <Component id="jLabel27" alignment="3" pref="16" max="32767" attributes="0"/>
+                          <Component id="jLabel27" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">

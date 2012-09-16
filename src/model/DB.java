@@ -25,29 +25,29 @@ public final class DB {
                 JOptionPane.showMessageDialog(null, e);
             }
             Class.forName(prop.getDriver()).newInstance();
-            con = DriverManager.getConnection("jdbc:mysql://" + prop.getHost() + ":" + prop.getPort() + "/tutionDb?autoReconnect=true", prop.getUsername(), prop.getPassword());
+            con = DriverManager.getConnection("jdbc:mysql://" + prop.getHost() + ":" + prop.getPort() + "/TutionDB?autoReconnect=true", prop.getUsername(), prop.getPassword());
         }
         return con;
     }
 
     public static ResultSet getResultset(String sql) throws Exception {
-        getmyCon();
-        return con.createStatement().executeQuery(sql);
+     
+        return getmyCon().createStatement().executeQuery(sql);
     }
 
     public static void stexecuteUpdate(String sql) throws Exception {
-        getmyCon();
-        con.createStatement().executeUpdate(sql);
+        
+        getmyCon().createStatement().executeUpdate(sql);
     }
 
     public static PreparedStatement Preparestatement(String sql) throws Exception {
-        getmyCon();
-        return con.prepareStatement(sql);
+       
+        return getmyCon().prepareStatement(sql);
     }
 
-    public static String lastinsertId(String table, String selectinid, Connection con) throws Exception {
-        System.out.println("select max(" + selectinid + ") as id1 from " + table + " ");
-        ResultSet res = con.createStatement().executeQuery("select max(" + selectinid + ") as id1 from " + table + " ");
+    public static String lastinsertId(String table, String selectinid) throws Exception {
+        
+        ResultSet res = getmyCon().createStatement().executeQuery("select max(" + selectinid + ") as id1 from " + table + " ");
         if (res.next()) {
             return res.getString("id1") == null ? "0" : res.getString("id1");
         }

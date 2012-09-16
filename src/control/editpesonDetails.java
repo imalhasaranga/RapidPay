@@ -1,4 +1,3 @@
-
 package control;
 
 import java.sql.Connection;
@@ -249,15 +248,15 @@ public final class editpesonDetails {
 
             DefaultTableModel df = (DefaultTableModel) tablae.getModel();
             Connection con = DB.getmyCon();
-            con.setAutoCommit(false);
-            String lastinvoiceid = DB.lastinsertId("payment_invoice_student", "Invoice_id", con);
-            lastinvoiceid = (lastinvoiceid == null) ? "1" : "" + (Integer.parseInt(lastinvoiceid) + 1);
 
+            String lastinvoiceid = DB.lastinsertId("payment_invoice_student", "Invoice_id"); //// PROBLEM OCCURING CODE LINE /////////
+            lastinvoiceid = (lastinvoiceid == null) ? "1" : "" + (Integer.parseInt(lastinvoiceid) + 1);
+            con.setAutoCommit(false);
             for (int i = 0; i < df.getRowCount(); i++) {
                 con.createStatement().executeUpdate("insert into student_class(user_student,class_id,class_fees,is_active) values('" + studentid + "','" + df.getValueAt(i, 0).toString() + "','" + df.getValueAt(i, 4).toString() + "','1')");
-            // DB.stexecuteUpdate("insert into payment_invoice_student(Invoice_id,user_student_id,class_id,class_fees,month,user_stafff,pay_type,Date_Time) values('" + lastinvoiceid + "','" + studentid + "','" + df.getValueAt(i, 0).toString() + "','" + df.getValueAt(i, 3).toString() + "','" + new SimpleDateFormat("MMM").format(new Date()) + "','" + Mainwindow.UserStaffID + "','Admission','" + new SimpleDateFormat("yyyy/MM/dd").format(new Date()) + "')");
+                con.commit();
             }
-            con.commit();
+
             con.setAutoCommit(true);
             con = null;
         } catch (Exception e) {

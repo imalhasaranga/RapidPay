@@ -256,6 +256,7 @@ public final class Mainwindow extends javax.swing.JFrame {
         attendance.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         attendance.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1326818037_attendance_list.png"))); // NOI18N
         attendance.setText("Attendance ");
+        attendance.setEnabled(false);
         attendance.setPreferredSize(new java.awt.Dimension(107, 25));
         attendance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -453,6 +454,7 @@ public final class Mainwindow extends javax.swing.JFrame {
         mnreports16.setText("Reports");
 
         jMenu2.setText("Attendance");
+        jMenu2.setEnabled(false);
 
         miattstudents16.setText("Attendance - Student Vice");
         miattstudents16.addActionListener(new java.awt.event.ActionListener() {

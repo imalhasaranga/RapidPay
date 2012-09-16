@@ -37,6 +37,12 @@ public final class OccationalLogics {
     Vector teachersid;
     
     
+   static String months[] = {
+        " ", "January", "February", "March", "April", "May",
+        "June", "July", "August", "September", "October",
+        "November", "December"
+    };
+    
     static DateFormat da = new SimpleDateFormat("yyyy/MM/dd");
     static DateFormat time = new SimpleDateFormat("HH:mm");
 
@@ -422,4 +428,10 @@ public final class OccationalLogics {
 
 
     }
+    
+    public static String getMonth(int i){
+    
+    return months[i];
+    }
+    
 }
