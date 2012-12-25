@@ -185,8 +185,8 @@ public final class freemgtControl {
     }
 
     public void combosearch(String userid, JLabel payamut, JComboBox cmbmonth, JTable tblclass, JLabel ltotal, JLabel luptodatepay, JLabel lbalancefor, JTextField lastpaidmonth) {
-        
-        
+
+
         DefaultTableModel df = (DefaultTableModel) tblclass.getModel();
         df.setRowCount(0);
         try {
@@ -275,30 +275,29 @@ public final class freemgtControl {
         System.gc();
 
     }
-    
-    
-    public static void LoadPaymentDetails(JTable tbclass, String userid,int year,int month) {
+
+    public static void LoadPaymentDetails(JTable tbclass, String userid, int year, int month) {
         try {
-            System.out.println(year+" "+month);
+            System.out.println(year + " " + month);
             DefaultTableModel df = (DefaultTableModel) tbclass.getModel();
             df.setRowCount(0);
-            
+
 
             ResultSet rest = DB.getResultset("SELECT* FROM FeesMangeInfo WHERE StuID ='" + userid + "'");
 
-            
-            
+
+
             while (rest.next()) {
 
                 //
                 String classid = rest.getString("StuClass");
                 ArrayList v = new ArrayList();
-                
+
                 v.add(rest.getString("PayDay"));
                 v.add(rest.getString("subjectnm"));
                 v.add(rest.getString("TeacherName"));
                 v.add(rest.getString("StartTime") + " - " + rest.getString("EndTime"));
-               
+
                 //
                 ResultSet re = DB.getResultset("select* from Current_month where  (user_student = '" + userid + "') && (user_class ='" + classid + "') && (Date_Time like '" + year + "_______________')  order by (CAST(MONTH AS SIGNED)) desc");
                 if (re.next()) {
@@ -320,7 +319,6 @@ public final class freemgtControl {
 
 
     }
-    
 
     public boolean addDetailsToDB(String studentid, JTable student, JComboBox cmbmonth, JTextField lastpaidmonth) {
         Connection con = null;
@@ -332,11 +330,17 @@ public final class freemgtControl {
             con.setAutoCommit(false);
             Savepoint save1 = con.setSavepoint();
 
-            Statement lastid = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet lasidresult = lastid.executeQuery("select max(invoice_id ) as id1 from payment_invoice_student ");
-            lasidresult.first();
-            String id = lasidresult.getString("id1");
-            int lastinvoceid = Integer.parseInt(id == null ? "0" : id) + 1;
+            DB.getmyCon().createStatement().execute("CALL getInvoiceID(@Y)");
+            ResultSet rsx = DB.getResultset("SELECT @Y AS id");
+            rsx.first();
+            String id = rsx.getString("id");
+            int lastinvoceid = Integer.parseInt(id);
+
+//            Statement lastid = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+//            ResultSet lasidresult = lastid.executeQuery("select max(invoice_id ) as id1 from payment_invoice_student ");
+//            lasidresult.first();
+//            String id = lasidresult.getString("id1");
+//            int lastinvoceid = Integer.parseInt(id == null ? "0" : id) + 1;
             setInvoiceid(lastinvoceid + "");
 
             for (int j = 0; j < student.getRowCount(); j++) {
@@ -354,8 +358,9 @@ public final class freemgtControl {
                     } else {
                         con.createStatement().executeUpdate("insert into current_month(payment_id,month,user_student,Date_Time,user_class) values('" + genKey + "','" + LastPaidMonth + "','" + studentid + "','" + format.format(dat) + "','" + student.getValueAt(j, 0).toString() + "')   ");
                     }
+                    con.commit();
                 }
-                con.commit();
+
             }
             con.setAutoCommit(true);
             con = null;
@@ -429,12 +434,6 @@ public final class freemgtControl {
         return true;
     }
 
-   
-    
-    
-    
-    
-    
     public String getInvoiceid() {
         return invoiceid;
     }

@@ -17,7 +17,7 @@ public final class userloginControl {
 
     Mainwindow window;
     DateFormat df = new SimpleDateFormat("yyyy:MM:dd HH.mm.ss");
-
+    DateFormat df2 = new SimpleDateFormat("yyyy:MM:dd");
     public boolean checkLogin(String username, String pasword, userlogin log, Mainwindow window) {
         this.window = window;
         try {
@@ -25,7 +25,18 @@ public final class userloginControl {
             if (usr.next()) {
                 String logtime = saylogged(usr.getString("user_mainuser_id"));
                 window.securelogin(usr.getString("User_name"), usr.getString("user_priviledge_type"), usr.getString("user_mainuser_id"), window, log,logtime);
+                String today = df2.format(new Date());
                 
+                //adding current id to invoiceid table
+                ResultSet rs1 = DB.getResultset("SELECT Today FROM invoiceid where Today ='"+today+"' ");
+                if(rs1.next()){
+                // no need to do     
+                }else{
+                    ResultSet rsx = DB.getResultset("select max(invoice_id ) as id1 from payment_invoice_student ");
+                    rsx.first();
+                    String id = rsx.getString("id1");
+                    DB.stexecuteUpdate("update invoiceid set Today = '"+today+"',currentID='"+id+"' ");
+                }
                 return false;
             }
 

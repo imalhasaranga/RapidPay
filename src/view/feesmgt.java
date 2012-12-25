@@ -28,16 +28,13 @@ public final class feesmgt extends javax.swing.JPanel {
     JPOSPrinter newPrinter = null;
 
     private void initializePrinter() {
-        if (Mainwindow.EnblePrint) {
-            if (newPrinter == null) {
+        if (Mainwindow.EnblePrint) {        
                 try {
                     newPrinter = new JPOSPrinter(cont1);
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Unable To connect with the Printer program will now terminate!!", "ERROR", JOptionPane.ERROR_MESSAGE);
                     System.exit(0);
                 }
-            }
-
         }
     }
 

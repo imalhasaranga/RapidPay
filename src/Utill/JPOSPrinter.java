@@ -36,16 +36,16 @@ public class JPOSPrinter {
     ArrayList<String> Teacher = null;
     ArrayList<String> Amounts = null;
 
-    public JPOSPrinter() {}
+    public JPOSPrinter() {
+    }
 
-    public JPOSPrinter(instituteControl controlins) throws Exception{
+    public JPOSPrinter(instituteControl controlins) throws Exception {
 
         this.controlins = controlins;
-        da = new SimpleDateFormat("yyyy/MM/dd");
-        time = new SimpleDateFormat("HH:mm");
-        String PrintersLogicName = "TM-U220D";
-
         if (ptr == null) {
+            da = new SimpleDateFormat("yyyy/MM/dd");
+            time = new SimpleDateFormat("HH:mm");
+            String PrintersLogicName = "TM-U220D";
             try {
 
 
@@ -56,9 +56,9 @@ public class JPOSPrinter {
 
             } catch (JposException ex) {
                 JOptionPane.showMessageDialog(null, "The port name is illegal. or couldn't be connected to the device", "", JOptionPane.WARNING_MESSAGE);
-               // ex.printStackTrace();
+                // ex.printStackTrace();
                 throw ex;
-                
+
             }
             try {
                 //Enable the device.           
@@ -67,13 +67,13 @@ public class JPOSPrinter {
                 //System.out.println(ex);
                 JOptionPane.showMessageDialog(null, "Can not Enable The Printer Connected, internal Error Occured, Please Call for Maintanace", "", JOptionPane.WARNING_MESSAGE);
                 throw ex;
-               
+
             }
             try {
                 //Even if using any printers, 0.01mm unit makes it possible to print neatly.
                 ptr.setMapMode(POSPrinterConst.PTR_MM_METRIC);
-            //Output by the high quality mode
-            // ptr.setRecLetterQuality(true); ---------------------------------- hight quality output--------------
+                //Output by the high quality mode
+                // ptr.setRecLetterQuality(true); ---------------------------------- hight quality output--------------
 
             } catch (JposException ex) {
                 System.out.println(ex);
@@ -85,7 +85,6 @@ public class JPOSPrinter {
     public synchronized void StartPrinting() {
 
         Thread t1 = new Thread(new Runnable() {
-
             @Override
             public void run() {
 
@@ -95,12 +94,12 @@ public class JPOSPrinter {
                 try {
 
 
-                    ResultSet rs = DB.getResultset("SELECT* FROM payment_invoice_student a JOIN class b ON a.class_id = b.class_id" +
-                            " JOIN SUBJECT d ON b.subject_id = d.subject_id " +
-                            " JOIN user_main c ON b.Teacher_id = c.user_id" +
-                            " JOIN grade gr ON  b.Grade_id = gr.Grade_id" +
-                            " WHERE " +
-                            " a.invoice_id =" + getInvoiceid());
+                    ResultSet rs = DB.getResultset("SELECT* FROM payment_invoice_student a JOIN class b ON a.class_id = b.class_id"
+                            + " JOIN SUBJECT d ON b.subject_id = d.subject_id "
+                            + " JOIN user_main c ON b.Teacher_id = c.user_id"
+                            + " JOIN grade gr ON  b.Grade_id = gr.Grade_id"
+                            + " WHERE "
+                            + " a.invoice_id =" + getInvoiceid());
 
                     while (rs.next()) {
                         subj.add(rs.getString("class_id") + " " + rs.getString("Subject_name"));
@@ -126,7 +125,6 @@ public class JPOSPrinter {
     public synchronized void printTopPart() {
 
         Thread t = new Thread(new Runnable() {
-
             @Override
             public void run() {
                 printTopPartnoThr();
